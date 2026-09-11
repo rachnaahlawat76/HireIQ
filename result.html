@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HireIQ - Interview Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HireIQ</div>
+    <div class="header-text">Interview Evaluation</div>
+</header>
+
+<main>
+
+    <section class="welcome">
+        <h1>Interview Result</h1>
+        <p>Candidate performance evaluation</p>
+    </section>
+
+    <div class="result-card">
+
+        <h2>Candidate Performance</h2>
+
+        <div class="score">
+            <span id="overallScore">82</span>
+            <small>/ 100</small>
+        </div>
+
+        <p class="result-message">
+            Good Performance
+        </p>
+
+        <div class="scores">
+
+            <div class="score-box">
+                <h3>Technical Knowledge</h3>
+                <strong>85%</strong>
+            </div>
+
+            <div class="score-box">
+                <h3>Communication</h3>
+                <strong>80%</strong>
+            </div>
+
+            <div class="score-box">
+                <h3>Problem Solving</h3>
+                <strong>82%</strong>
+            </div>
+
+        </div>
+
+        <div class="feedback">
+
+            <h2>AI Evaluation Feedback</h2>
+
+            <p>
+                The candidate demonstrated a good understanding of
+                fundamental technical concepts and provided relevant
+                answers to most questions.
+            </p>
+
+            <p>
+                Communication was clear and the candidate showed
+                reasonable confidence while answering.
+            </p>
+
+            <p>
+                Further improvement in advanced technical concepts
+                and problem-solving explanations is recommended.
+            </p>
+
+        </div>
+
+        <div class="recommendation">
+
+            <h2>Recommendation</h2>
+
+            <div class="recommendation-box">
+                Recommended for Next Round
+            </div>
+
+        </div>
+
+        <button onclick="startNewInterview()">
+            Start New Interview
+        </button>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 HireIQ | AI-Powered Interview Platform</p>
+</footer>
+
+<script>
+
+const savedResult = localStorage.getItem("hireiqResult");
+
+if (savedResult) {
+
+    const result = JSON.parse(savedResult);
+
+    document.getElementById("overallScore").textContent =
+        result.overall;
+
+    document.querySelectorAll(".score-box strong")[0].textContent =
+        result.technical + "%";
+
+    document.querySelectorAll(".score-box strong")[1].textContent =
+        result.communication + "%";
+
+    document.querySelectorAll(".score-box strong")[2].textContent =
+        result.problemSolving + "%";
+}
+
+
+function startNewInterview() {
+
+    localStorage.removeItem("hireiqResult");
+
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>

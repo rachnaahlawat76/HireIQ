@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HireIQ - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">HireIQ</div>
+
+    <div class="header-text">
+        Interview Dashboard
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="welcome">
+        <h1>Candidate Dashboard</h1>
+        <p>Track your interview performance</p>
+    </section>
+
+
+    <!-- Candidate Information -->
+
+    <div class="dashboard-card">
+
+        <h2>Candidate Information</h2>
+
+        <div class="candidate-info">
+
+            <div>
+                <span>Name</span>
+                <strong>Rachna</strong>
+            </div>
+
+            <div>
+                <span>Interview</span>
+                <strong>Technical Interview</strong>
+            </div>
+
+            <div>
+                <span>Status</span>
+                <strong class="completed">Completed</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Statistics -->
+
+    <div class="dashboard-card">
+
+        <h2>Interview Statistics</h2>
+
+        <div class="dashboard-stats">
+
+            <div class="stat-box">
+                <span>Total Questions</span>
+                <strong>5</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>Completed</span>
+                <strong>5</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>Overall Score</span>
+                <strong id="dashboardScore">82%</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Performance -->
+
+    <div class="dashboard-card">
+
+        <h2>Performance Overview</h2>
+
+        <div class="performance">
+
+            <div class="performance-row">
+
+                <span>Technical Knowledge</span>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+
+                <strong>85%</strong>
+
+            </div>
+
+
+            <div class="performance-row">
+
+                <span>Communication</span>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+
+                <strong>80%</strong>
+
+            </div>
+
+
+            <div class="performance-row">
+
+                <span>Problem Solving</span>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 82%;"></div>
+                </div>
+
+                <strong>82%</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Action -->
+
+    <div class="dashboard-action">
+
+        <button onclick="viewResult()">
+            View Detailed Result
+        </button>
+
+        <button onclick="startInterview()">
+            Start New Interview
+        </button>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 HireIQ | AI-Powered Interview Platform</p>
+
+</footer>
+
+
+<script>
+
+function viewResult() {
+    window.location.href = "result.html";
+}
+
+function startInterview() {
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+
+</html>
